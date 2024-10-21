@@ -1,12 +1,12 @@
 # Educação Continuada
 
 ## Descrição
-**Educação Continuada** é uma plataforma educacional focada em saúde sexual e reprodutiva. Desenvolvida com **Node.js** e **Express.js** no backend, e **React** com **TypeScript** no frontend, esta aplicação oferece uma experiência interativa e informativa para os usuários.
+**Educação Continuada** é uma plataforma educacional focada em saúde sexual e reprodutiva. Desenvolvida com **Node.js** e **Express.ts** no backend, e **React** com **TypeScript** no frontend, esta aplicação oferece uma experiência interativa e informativa para os usuários.
 
 ## Stack de Desenvolvimento
 - **Front-end:** React, TypeScript
-- **Back-end:** Node.js, Express.js
-- **Banco de Dados:** MongoDB
+- **Back-end:** Node.js, Express.ts
+- **Banco de Dados:** Mysql
 - **Hospedagem e Implantação:** GitHub Pages
 
 ## Funcionalidades
@@ -19,10 +19,11 @@
 
 ## Estrutura do Banco de Dados
 ### Usuário
-- **id:** INT, PK, AUTO INCREMENT
-- **name:** VARCHAR(100)
-- **idade:** INT
-- **email:** VARCHAR(100)
+- **id:** VARCHAR(36) PRIMARY KEY,
+- **name:** VARCHAR(64) NOT NULL,
+- **nickname:** VARCHAR(64) NOT NULL,
+- **email:** VARCHAR(100) NOT NULL UNIQUE,
+- **password:** VARCHAR(255) NOT NULL
 
 ### Tópico
 - **id:** INT, PK, AUTO INCREMENT
@@ -46,10 +47,19 @@
 ### Pré-requisitos
 Antes de executar o projeto, certifique-se de ter instalado:
 - [Node.js](https://nodejs.org/)
-- [MongoDB](https://www.mongodb.com/try/download/community)
+- [MySQL](https://www.mysql.com/downloads/)
 
 ### Passos para Executar
 1. **Clone o repositório:**
    ```bash
    git clone https://github.com/diego-humberto/educacao-continua
    cd educacao-continua
+
+### .env.exemplo
+
+- DB_HOST = ///
+- DB_USER = ///
+- DB_PASSWORD = ///
+- DB_SCHEMA = ///
+
+-JWT_SECRET= ///
